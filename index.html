@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gobelin Rental 🧌</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🧌 Gobelin Rental</div>
+
+  <nav>
+    <a href="#">Accueil</a>
+    <a href="#menu">Gobelins</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="cart" id="cartBtn">
+    🎒 <span id="cartCount">0</span>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Loue ton gobelin en 1 clic</h1>
+  <p>Services douteux mais efficaces depuis l’an 1123</p>
+
+  <button onclick="document.querySelector('#menu').scrollIntoView({behavior:'smooth'})">
+    Voir les gobelins
+  </button>
+</section>
+
+<section id="menu" class="menu">
+  <h2>🧌 Nos Gobelins</h2>
+
+  <div class="grid">
+
+    <!-- HUGOBELIN -->
+    <div class="card">
+      <img src="images/hugobelin.jpg.png" alt="Hugobelin">
+      <h3>Hugobelin 🧑‍💻</h3>
+      <p>Gobelin à lunettes, expert en stratégie douteuse</p>
+      <span>15 pièces d’or / jour</span>
+      <button onclick="addToCart('Hugobelin')">Louer</button>
+    </div>
+
+    <!-- SEBOGOBELIN -->
+    <div class="card">
+      <img src="images/sebogobelin.jpg.png" alt="Sebogobelin">
+      <h3>Sebogobelin 🦷</h3>
+      <p>Gobelin à longues dents, agressif mais loyal</p>
+      <span>12 pièces d’or / jour</span>
+      <button onclick="addToCart('Sebogobelin')">Louer</button>
+    </div>
+
+    <!-- CHASSEUR -->
+    <div class="card">
+      <img src="images/camillogobelin.jpg.png" alt="Gobelin Chasseur">
+      <h3>Gobelin Chasseur 🏹</h3>
+      <p>Maître de la traque et des embuscades</p>
+      <span>18 pièces d’or / jour</span>
+      <button onclick="addToCart('Gobelin Chasseur')">Louer</button>
+    </div>
+
+    <!-- GOBELIN D'OR -->
+    <div class="card">
+      <img src="images/gobeldor.jpg.png" alt="Gobelin d'Or">
+      <h3>Gobelin d’Or ✨</h3>
+      <p>Créature rare qui attire les richesses</p>
+      <span>50 pièces d’or / jour</span>
+      <button onclick="addToCart('Gobelin d’Or')">Louer</button>
+    </div>
+
+    <!-- GOBELINE ROYALE -->
+    <div class="card">
+      <img src="images/putagobelina.jpg.png" alt="Gobeline Royale">
+      <h3>Gobeline Royale 👑</h3>
+      <p>Charismatique, dangereuse, imprévisible</p>
+      <span>40 pièces d’or / jour</span>
+      <button onclick="addToCart('Gobeline Royale')">Louer</button>
+    </div>
+
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <h2>📜 Contact</h2>
+  <p>Service non réglementé par l’Union des Royaumes Unis</p>
+</section>
+
+<!-- PANIER -->
+<div class="cart-panel" id="cartPanel">
+  <h2>🎒 Ton sac à gobelins</h2>
+  <ul id="cartList"></ul>
+  <button onclick="clearCart()">Libérer tous les gobelins</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
